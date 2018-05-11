@@ -91,6 +91,13 @@ $(function() {
         //calls the loadfeed function feed & uses done() as argument for beforeEach()
         beforeEach(function (done) {
             loadFeed(0, done);
+        });
+        it('should have at least a single .entry element within the .feed container', function (done) {
+            //defines the to be checked entries
+            var entries = $('.entry');
+            //expects that there is at least one entry
+            expect(entries.length).toBeGreaterThan(0);
+            done();
         });        
     });
 }());
