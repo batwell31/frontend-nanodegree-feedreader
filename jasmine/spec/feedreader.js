@@ -63,14 +63,21 @@ $(function() {
         */
         it('the menu element should be hidden by default', function () {
             expect(body.hasClass('menu-hidden')).toBe(true);
-        });      
-
+        });
         /* TODO: Write a test that ensures the menu changes
         * visibility when the menu icon is clicked. This test
         * should have two expectations: does the menu display when
         * clicked and does it hide when clicked again.
         */
-        
+        it('the menu should change visibility when clicked', function () {
+            //checks if menu-hidden is false when clicked the first time
+            menuIcon.click();
+            expect(body.hasClass('menu-hidden')).toBe(false);
+
+            //checks if menu-hidden is true when clicked the second time
+            menuIcon.click();
+            expect(body.hasClass('menu-hidden')).toBe(true);
+        });        
     });
         /* TODO: Write a test that ensures the menu element is
          * hidden by default. You'll have to analyze the HTML and
