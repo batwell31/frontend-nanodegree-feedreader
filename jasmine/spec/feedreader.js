@@ -82,7 +82,7 @@ $(function () {
         // then calls loadFeed(1) and uses done() as argument for beforeEach()
         beforeEach(function (done) {
             loadFeed(0, function () {
-                // targets the .feed element and saves it to the variable initialContent
+                // targets the feed container element and saves it to the variable initialContent
                 initialContent = document.querySelector('.feed').innerHTML;
 
                 loadFeed(1, function () {
@@ -93,7 +93,7 @@ $(function () {
 
         // test
         it('When a new feed is loaded by the loadFeed function the content changes', function () {
-            // targets the feed element, and saves it into the variable newContent
+            // targets the feed container element, and saves it into the variable newContent
             var newContent = document.querySelector('.feed').innerHTML;
             
             // expects new content not to be the initial content
