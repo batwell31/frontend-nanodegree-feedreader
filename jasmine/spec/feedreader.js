@@ -5,23 +5,24 @@ $(function () {
         
         // makes sure the allFeeds object is defined, and never empty.
         it('are defined', function () {
+            // expects allFeeds object to be defined + exist
             expect(allFeeds).toBeDefined();
             expect(allFeeds.length).not.toBe(0);
         });
         
         // test loops through each feed in the allFeeds object
-        // ensures it has a URL defined and that the URL is not empty.
         it('should have URL defined, and URL should not be empty', function () {
             allFeeds.forEach(function (feed) {
+                // expects feed URL to be defined + exist
                 expect(feed.url).toBeDefined();
                 expect(feed.url.length).not.toBe(0);
             });
         });
-        
-        // test that loops through the allFeeds object to make sure the NAME
-        // is defined, and that it is not empty
+
+        // test loops through allFeeds object
         it('should have a name defined, and the name should not be empty', function () {
             allFeeds.forEach(function (feed) {
+                // expects feed name to be defined + exist
                 expect(feed.name).toBeDefined();
                 expect(feed.name.length).not.toBe(0);
             });
@@ -35,12 +36,13 @@ $(function () {
         var body = $('body'),
             menuIcon = $('.menu-icon-link');
             
-        // tests to make sure the menu element is hidden by default
+        // test
         it('the menu element should be hidden by default', function () {
+            // expects the menu element to be hidden by default
             expect(body.hasClass('menu-hidden')).toBe(true);
         });
 
-        // tests to make sure the menu changes visibility when clicked
+        // test
         it('the menu should change visibility when clicked', function () {
             
             //checks if menu-hidden is false when clicked the first time
@@ -89,7 +91,7 @@ $(function () {
             });
         });
 
-        // tests that the content changes by the loadFeed function when a new feed is loaded
+        // test
         it('When a new feed is loaded by the loadFeed function the content changes', function () {
             // targets the feed element, and saves it into the variable newContent
             var newContent = document.querySelector('.feed').innerHTML;
