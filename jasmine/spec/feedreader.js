@@ -87,6 +87,10 @@ $(function() {
          * a single .entry element within the .feed container.
          * Remember, loadFeed() is asynchronous so this test wil require
          * the use of Jasmine's beforeEach and asynchronous done() function.
-         */        
+         */
+        //calls the loadfeed function feed & uses done() as argument for beforeEach()
+        beforeEach(function (done) {
+            loadFeed(0, done);
+        });        
     });
 }());
