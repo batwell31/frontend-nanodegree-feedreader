@@ -108,5 +108,12 @@ $(function() {
             */
         var previousUrl;
         var newUrl;
+
+        beforeEach(function (done) {
+            // checks the previous Url for the entry-link
+            previousUrl = $('.entry-link').attr('href');
+            // calls next feed with loadFeed
+            loadFeed(1, done);
+        });
     })     
 }());
