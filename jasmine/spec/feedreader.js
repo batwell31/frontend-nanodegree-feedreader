@@ -1,8 +1,6 @@
 $(function () {    
-   
     // "RSS Feeds" suite
-    describe('RSS Feeds', function () {
-        
+    describe('RSS Feeds', function () {        
         // makes sure the allFeeds object is defined, and never empty.
         it('are defined', function () {
             // expects allFeeds object to be defined + exist
@@ -31,7 +29,7 @@ $(function () {
 
     // "The menu" suite
     describe('The menu', function () {
-        
+                
         // defines the body/menu icon link element
         var body = $('body'),
             menuIcon = $('.menu-icon-link');
@@ -58,7 +56,7 @@ $(function () {
     // "Initial Entries" suite
     describe('Initial Entries', function () {
 
-        // calls the loadfeed function feed & uses done() as argument for beforeEach()
+        // calls loadFeed() and uses done() as argument for beforeEach()
         beforeEach(function (done) {
             loadFeed(0, done);
         });
