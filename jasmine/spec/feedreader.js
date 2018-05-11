@@ -115,5 +115,11 @@ $(function() {
             // calls next feed with loadFeed
             loadFeed(1, done);
         });
+        // checks the new Url does not match the Url of the previous feed
+        newUrl = $('.entry-link').attr('href');
+        it('content should change when new feed is loaded by the loadFeed function', function (done) {
+            expect(newUrl).not.toBe(previousUrl);
+            done();
+        });
     })     
 }());
