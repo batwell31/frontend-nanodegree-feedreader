@@ -64,11 +64,11 @@ $(function () {
         // tests that there is at least one entry element inside the feed container
         it('should have at least a single .entry element within the .feed container', function (done) {
            
-            // uses the  parent-child relationship
-            var entriesInContainer = $('.feed.entry');
+            // targets the feed container element into a variable called feed
+            var feed = $('.feed');
 
-            //expects that there is at least one entry
-            expect(entriesInContainer.length).toBeGreaterThan(0);
+            //expects that there is at least one entry in the feed container
+            expect(feed.children().length).toBeGreaterThan(0);
             done();
         });
     });
