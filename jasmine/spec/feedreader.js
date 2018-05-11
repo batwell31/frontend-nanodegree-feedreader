@@ -106,20 +106,21 @@ $(function () {
             * by the loadFeed function that the content actually changes.
             * Remember, loadFeed() is asynchronous.
             */
-        var previousUrl;
-        var newUrl;
+        var initialContent;
 
         beforeEach(function (done) {
-            // checks the previous Url for the entry-link
-            previousUrl = $('.entry-link').attr('href');
-            // calls next feed with loadFeed
-            loadFeed(1, done);
+            loadFeed(0, function () {
+                initialContent = document.querySelector('.feed').innerHTML;
+
+                loadFeed(1, function () {
+                    done();
+                });
+            });
         });
-        // checks the new Url does not match the Url of the previous feed
-        newUrl = $('.entry-link').attr('href');
-        it('content should change when new feed is loaded by the loadFeed function', function (done) {
-            expect(newUrl).not.toBe(previousUrl);
-            done();
+
+        it('When a new feed is loaded by the loadFeed function the content changes', function () {
+            var newContent = document.querySelector('.feed').innerHTML;
+            expect(newContent).not.toBe(initialContent);
         });
     })
 }());
