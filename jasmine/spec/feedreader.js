@@ -1,7 +1,7 @@
 $(function () {    
     // "RSS Feeds" suite
     describe('RSS Feeds', function () {        
-        // makes sure the allFeeds object is defined, and never empty.
+        // test makes sure the allFeeds object is defined, and never empty.
         it('are defined', function () {
             // expects allFeeds object to be defined + exist
             expect(allFeeds).toBeDefined();
@@ -29,7 +29,7 @@ $(function () {
 
     // "The menu" suite
     describe('The menu', function () {
-                
+
         // defines the body/menu icon link element
         var body = $('body'),
             menuIcon = $('.menu-icon-link');
@@ -61,7 +61,7 @@ $(function () {
             loadFeed(0, done);
         });
         
-        // tests that there is at least one entry element inside the feed container
+        // test
         it('should have at least a single .entry element within the .feed container', function (done) {
            
             // targets the feed container element into a variable called feed
@@ -78,6 +78,8 @@ $(function () {
         
         var initialContent;
 
+        // calls loadFeed(0) and targets the feed container in the DOM 
+        // then calls loadFeed(1) and uses done() as argument for beforeEach()
         beforeEach(function (done) {
             loadFeed(0, function () {
                 // targets the .feed element and saves it to the variable initialContent
