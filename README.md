@@ -1,6 +1,6 @@
 # Jasmine Feed Reader Testing #
 
-In this project you are given a web-based application that reads RSS feeds. The original developer of this application clearly saw the value in testing, they've already included Jasmine and even started writing their first test suite! Unfortunately, they decided to move on to start their own company and we're now left with an application with an incomplete test suite. That's where you come in.
+This was the 4th project of my Front-End Web Developer Nanodegree program.  It was given to me by Udacity.  I had to fill in the tests, and make them work for the expected result.  Udacity gave a lot of helpful `TODO: Comments` to help guide me with this.
 
 ## HOW TO RUN THIS UNIT TEST ##
 
@@ -23,3 +23,7 @@ In this project you are given a web-based application that reads RSS feeds. The 
 13) Callbacks should be used to ensure that feeds are loaded before they are tested.
 14) Implement error handling for undefined variables and out-of-bound array access.
 15) When complete - all of your tests should pass.
+
+## ACKNOWLEDGEMENTS ##
+
+Udacity suplied me with all the files, and had me add to the `feedreader.js` file.  I followed the steps above "HOW TO RUN THIS UNIT TEST" to make this test complete!
